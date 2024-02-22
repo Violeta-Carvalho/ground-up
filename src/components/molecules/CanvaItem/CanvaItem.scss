@@ -5,5 +5,8 @@
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
-    max-width: 100px;
+    width: fit-content;
+    height: 24px;
+    margin: 8px;
+    white-space: nowrap;
 }

@@ -4,8 +4,6 @@
     padding: 0;
 
     .accordion-item {
-        border: 1px solid #ccc;
-
         &.active {
             .accordion-btn::after {
                 transform: rotate(-180deg);
@@ -51,5 +49,9 @@
     .accordion-item-content {
         border-top: 1px solid #cccccc;
         padding: 15px 20px;
+
+        & > *:not(:first-child) {
+            margin-top: 4px
+        }
     }
 } 

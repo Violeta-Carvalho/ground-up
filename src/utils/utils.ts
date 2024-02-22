@@ -1,3 +1,4 @@
+import IItem from "../types/IItem";
 import initialItems from "./initialItems.json";
 
 function getCanvaItems() {
@@ -22,4 +23,14 @@ function getMenuItems() {
 
 const isEqual = (a: string[], b: string[]) => JSON.stringify(a.sort()) === JSON.stringify(b.sort())
 
-export { getCanvaItems, isEqual, getMenuItems };
+function compare(a: IItem, b: IItem ) {
+  if ( a.name < b.name ){
+    return -1;
+  }
+  if ( a.name > b.name ){
+    return 1;
+  }
+  return 0;
+}
+
+export { getCanvaItems, isEqual, getMenuItems, compare };

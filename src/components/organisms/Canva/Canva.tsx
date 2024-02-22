@@ -13,6 +13,10 @@ function Canva() {
     setCanvaItems(tempCanvaItems);
   };
 
+  const clearAccelerator = () => {
+    setCanvaItems([]);
+  };
+
   const checkRecipes = () => {
     let recipe;
     const currentItems = getMenuItems();
@@ -46,10 +50,12 @@ function Canva() {
 
   return (
     <div className="canva">
-      <h1>Particle Accelerator</h1>
+      <div className="header">
+        <h1>Particle Accelerator</h1>
+        <Button title="Clear accelerator" onClick={clearAccelerator} />
+      </div>
       <Button title="Accelerate particles" onClick={checkRecipes} secondary />
-      <h2>Particles</h2>
-      <div>
+      <div className="accelerator">
         {canvaItems.map((itemName, index) => {
           return <CanvaItem title={itemName} key={index} />;
         })}

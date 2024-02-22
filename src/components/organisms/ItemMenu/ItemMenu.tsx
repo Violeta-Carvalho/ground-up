@@ -3,7 +3,7 @@ import IItem from "../../../types/IItem";
 import itemsJson from "../../../utils/items.json";
 import Accordion from "../../molecules/Accordion/Accordion";
 import "./ItemMenu.scss";
-import { getMenuItems } from "../../../utils/utils";
+import { compare, getMenuItems } from "../../../utils/utils";
 
 type ItemsProps = {
   items?: IItem[];
@@ -52,10 +52,10 @@ function ItemMenu(props: ItemsProps) {
       return { ...currentItem };
     });
 
-    setFundamentalItems(tempFundamentalItems.sort());
-    setSubAtomicItems(tempSubAtomicItems.sort());
-    setAtomItems(tempAtomItems.sort());
-    setMoleculeItems(tempMoleculeItems.sort());
+    setFundamentalItems(tempFundamentalItems.sort(compare));
+    setSubAtomicItems(tempSubAtomicItems.sort(compare));
+    setAtomItems(tempAtomItems.sort(compare));
+    setMoleculeItems(tempMoleculeItems.sort(compare));
   };
 
   const btnOnClick = (idx: number) => {
@@ -69,7 +69,7 @@ function ItemMenu(props: ItemsProps) {
 
   return (
     <div className="item-menu">
-      <h1>Items</h1>
+      <h1>Particles</h1>
       <Accordion
         title="Fundamental"
         items={fundamentalItems}
@@ -86,7 +86,7 @@ function ItemMenu(props: ItemsProps) {
       )}
       {atomItems.length > 0 && (
         <Accordion
-          title="Sub Atomic"
+          title="Atomic"
           items={atomItems}
           isOpen={currentIdx === 2}
           onClick={() => btnOnClick(2)}
@@ -94,7 +94,7 @@ function ItemMenu(props: ItemsProps) {
       )}
       {moleculeItems.length > 0 && (
         <Accordion
-          title="Sub Atomic"
+          title="Molecular"
           items={moleculeItems}
           isOpen={currentIdx === 3}
           onClick={() => btnOnClick(3)}
