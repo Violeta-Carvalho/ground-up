@@ -14,7 +14,17 @@ function ItemMenu(props: ItemsProps) {
   const [subAtomicItems, setSubAtomicItems] = useState<IItem[]>([]);
   const [atomItems, setAtomItems] = useState<IItem[]>([]);
   const [moleculeItems, setMoleculeItems] = useState<IItem[]>([]);
-  const [currentIdx, setCurrentIdx] = useState(0);
+  const [materialItems, setMaterialItems] = useState<IItem[]>([]);
+
+  const [fundOpen, setFundOpen] = useState(true);
+  const [atomOpen, setAtomOpen] = useState(true);
+  const [subAtomOpen, setSubAtomOpen] = useState(true);
+  const [molOpen, setMolOpen] = useState(true);
+  const [matOpen, setMatOpen] = useState(true);
+
+  const [curItems, setCurItems] = useState(3);
+
+  const totalItems = itemsJson.length;
 
   const refreshItemMenu = () => {
     let tempCurrentItems = getMenuItems();
@@ -22,13 +32,17 @@ function ItemMenu(props: ItemsProps) {
     const tempSubAtomicItems: IItem[] = [];
     const tempAtomItems: IItem[] = [];
     const tempMoleculeItems: IItem[] = [];
+    const tempMaterialItems: IItem[] = [];
 
-    tempCurrentItems.map((itemName: string) => {
+    setCurItems(tempCurrentItems.length);
+
+    tempCurrentItems.forEach((itemName: string) => {
       const currentItem = itemsJson.find(
         (item) => item.name === itemName
       ) as IItem;
 
-      console.log(currentItem);
+      if (!currentItem) return;
+
       switch (currentItem.category) {
         case "Fundamental":
           tempFundamentalItems.push({ ...currentItem });
@@ -46,6 +60,10 @@ function ItemMenu(props: ItemsProps) {
           tempMoleculeItems.push({ ...currentItem });
           break;
 
+        case "Material":
+          tempMaterialItems.push({ ...currentItem });
+          break;
+
         default:
           break;
       }
@@ -56,10 +74,7 @@ function ItemMenu(props: ItemsProps) {
     setSubAtomicItems(tempSubAtomicItems.sort(compare));
     setAtomItems(tempAtomItems.sort(compare));
     setMoleculeItems(tempMoleculeItems.sort(compare));
-  };
-
-  const btnOnClick = (idx: number) => {
-    setCurrentIdx((currentValue) => (currentValue !== idx ? idx : -1));
+    setMaterialItems(tempMaterialItems.sort(compare));
   };
 
   useEffect(refreshItemMenu, []);
@@ -68,38 +83,56 @@ function ItemMenu(props: ItemsProps) {
   addEventListener("menu-items-change", refreshItemMenu);
 
   return (
-    <div className="item-menu">
-      <h1>Particles</h1>
-      <Accordion
-        title="Fundamental"
-        items={fundamentalItems}
-        isOpen={currentIdx === 0}
-        onClick={() => btnOnClick(0)}
-      />
-      {subAtomicItems.length > 0 && (
-        <Accordion
-          title="Sub Atomic"
-          items={subAtomicItems}
-          isOpen={currentIdx === 1}
-          onClick={() => btnOnClick(1)}
-        />
-      )}
-      {atomItems.length > 0 && (
-        <Accordion
-          title="Atomic"
-          items={atomItems}
-          isOpen={currentIdx === 2}
-          onClick={() => btnOnClick(2)}
-        />
-      )}
-      {moleculeItems.length > 0 && (
-        <Accordion
-          title="Molecular"
-          items={moleculeItems}
-          isOpen={currentIdx === 3}
-          onClick={() => btnOnClick(3)}
-        />
-      )}
+    <div>
+      <div className="item-menu-header">
+        <h1>Particles</h1>
+        <span>
+          {curItems}/{totalItems}
+        </span>
+      </div>
+
+      <div className="item-menu">
+        <div className="body">
+          <Accordion
+            title="Fundamental"
+            items={fundamentalItems}
+            isOpen={fundOpen}
+            onClick={() => setFundOpen(!fundOpen)}
+          />
+          {subAtomicItems.length > 0 && (
+            <Accordion
+              title="Sub Atomic"
+              items={subAtomicItems}
+              isOpen={subAtomOpen}
+              onClick={() => setSubAtomOpen(!subAtomOpen)}
+            />
+          )}
+          {atomItems.length > 0 && (
+            <Accordion
+              title="Atomic"
+              items={atomItems}
+              isOpen={atomOpen}
+              onClick={() => setAtomOpen(!atomOpen)}
+            />
+          )}
+          {moleculeItems.length > 0 && (
+            <Accordion
+              title="Molecular"
+              items={moleculeItems}
+              isOpen={molOpen}
+              onClick={() => setMolOpen(!molOpen)}
+            />
+          )}
+          {materialItems.length > 0 && (
+            <Accordion
+              title="Material"
+              items={materialItems}
+              isOpen={matOpen}
+              onClick={() => setMatOpen(!matOpen)}
+            />
+          )}
+        </div>
+      </div>
     </div>
   );
 }

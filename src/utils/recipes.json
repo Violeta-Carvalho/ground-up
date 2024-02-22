@@ -16,5 +16,36 @@
     "recipe": ["Proton", "Neutron", "Neutron", "Electron"],
     "result": ["Hydrogen"]
   },
-  { "recipe": ["Hydrogen", "Proton"], "result": ["Helium"] }
+  { "recipe": ["Hydrogen", "Hydrogen"], "result": ["Helium"] },
+  { "recipe": ["Hydrogen", "Proton", "Electron"], "result": ["Helium"] },
+  { "recipe": ["Helium", "Hydrogen"], "result": ["Lithium"] },
+  { "recipe": ["Lithium", "Hydrogen"], "result": ["Beryllium"] },
+  { "recipe": ["Beryllium", "Hydrogen"], "result": ["Boron"] },
+  { "recipe": ["Boron", "Hydrogen"], "result": ["Carbon"] },
+  { "recipe": ["Carbon", "Hydrogen"], "result": ["Nitrogen"] },
+  { "recipe": ["Nitrogen", "Hydrogen"], "result": ["Oxygen"] },
+
+  { "recipe": ["Helium", "Helium"], "result": ["Helium Gas"] },
+  { "recipe": ["Hydrogen", "Hydrogen", "Oxygen"], "result": ["Water"] },
+  { "recipe": ["Oxygen", "Oxygen"], "result": ["Oxygen Gas"] },
+  { "recipe": ["Oxygen", "Carbon"], "result": ["Carbon Monoxide"] },
+  { "recipe": ["Oxygen", "Carbon", "Carbon"], "result": ["Carbon Gas"] },
+  { "recipe": ["Nitrogen", "Nitrogen"], "result": ["Nitrogen Gas"] },
+  {
+    "recipe": ["Carbon", "Carbon", "Carbon", "Carbon", "Carbon", "Carbon"],
+    "result": ["Graphite"]
+  },
+  {
+    "recipe": [
+      "Carbon",
+      "Carbon",
+      "Carbon",
+      "Carbon",
+      "Carbon",
+      "Carbon",
+      "Carbon",
+      "Carbon"
+    ],
+    "result": ["Diamond"]
+  }
 ]

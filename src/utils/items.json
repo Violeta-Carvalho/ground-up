@@ -14,6 +14,7 @@
     "category": "Fundamental",
     "description": "Fundamental particle, carries negative one-third elementary charge, subject to strong nuclear force in quantum physics."
   },
+
   {
     "name": "Proton",
     "category": "Subatomic",
@@ -24,14 +25,87 @@
     "category": "Subatomic",
     "description": "Subatomic particle, located in atomic nuclei, carries no charge, composed of quarks, and contributes to atomic mass without adding electric charge."
   },
+
   {
     "name": "Hydrogen",
     "category": "Atom",
-    "description": "Elemental atom with one proton and one electron, the simplest and most abundant in the universe, forming the basis of stars."
+    "description": "Elemental atom of atomic number 1. The simplest and most abundant in the universe, forming the basis of stars."
   },
   {
     "name": "Helium",
     "category": "Atom",
-    "description": "Inert gas, second lightest element, with two protons, two neutrons, and two electrons, commonly used in balloons and cryogenics."
+    "description": "Elemental atom of atomic number 2. Second lightest element, commonly used in balloons and cryogenics."
+  },
+  {
+    "name": "Lithium",
+    "category": "Atom",
+    "description": "Elemental atom of atomic number 3. An alkali metal essential in batteries and used in various industrial applications."
+  },
+  {
+    "name": "Beryllium",
+    "category": "Atom",
+    "description": "Elemental atom of atomic number 4. A lightweight metal, strong, with applications in aerospace and nuclear industries."
+  },
+  {
+    "name": "Boron",
+    "category": "Atom",
+    "description": "Elemental atom of atomic number 5. A metalloid with diverse applications, including electronics and borosilicate glass."
+  },
+  {
+    "name": "Carbon",
+    "category": "Atom",
+    "description": "Elemental atom of atomic number 6. Fundamental to life's organic compounds, forms diverse molecular structures."
+  },
+  {
+    "name": "Nitrogen",
+    "category": "Atom",
+    "description": "Elemental atom of atomic number 7. Essential for life, abundant in Earth's atmosphere, and crucial for the nitrogen cycle."
+  },
+  {
+    "name": "Oxygen",
+    "category": "Atom",
+    "description": "Elemental atom of atomic number 8. Vital for respiration, combustion, and a key element in various compounds."
+  },
+
+  {
+    "name": "Helium Gas",
+    "category": "Molecule",
+    "description": "It is a noble gas with a stable configuration and is commonly used in various application."
+  },
+  {
+    "name": "Water",
+    "category": "Molecule",
+    "description": ""
+  },
+  {
+    "name": "Oxygen Gas",
+    "category": "Molecule",
+    "description": ""
+  },
+  {
+    "name": "Carbon Monoxide",
+    "category": "Molecule",
+    "description": ""
+  },
+  {
+    "name": "Carbon Gas",
+    "category": "Molecule",
+    "description": ""
+  },
+  {
+    "name": "Nitrogen Gas",
+    "category": "Molecule",
+    "description": ""
+  },
+
+  {
+    "name": "Graphite",
+    "category": "Material",
+    "description": ""
+  },
+  {
+    "name": "Diamond",
+    "category": "Carbon",
+    "description": ""
   }
 ]

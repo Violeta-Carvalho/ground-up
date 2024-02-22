@@ -16,7 +16,7 @@ function MainMenu() {
   return (
     <div className="App">
       <header className="App-header">
-        <Button title="Start new game" onClick={() => newGame()} />
+        <Button title="Start game" onClick={() => newGame()} />
       </header>
     </div>
   );

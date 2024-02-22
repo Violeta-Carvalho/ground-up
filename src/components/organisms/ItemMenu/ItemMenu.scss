@@ -1,5 +1,13 @@
 .item-menu {
-    width: 160px;
-    height: 100vh;
+    height: calc(100vh - 100px);
+    width: 300px;
     overflow: auto;
+    box-sizing: border-box;
+}
+
+.item-menu-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }

@@ -1,5 +1,9 @@
 .game {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
+}
+
+::-webkit-scrollbar
+{
+	display: none;
 }

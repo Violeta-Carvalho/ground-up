@@ -8,12 +8,14 @@ import Menu from "../organisms/Menu/Menu";
 
 function Game() {
   return (
-    <section className="game">
+    <>
+      <section className="game">
+        <ItemMenu />
+        <Canva />
+        <Menu />
+      </section>
       <ToastContainer />
-      <ItemMenu />
-      <Canva />
-      <Menu />
-    </section>
+    </>
   );
 }
 
