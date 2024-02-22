@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../../atoms/Button/Button";
 import { getCanvaItems } from "../../../utils/utils";
 import "./CanvaItem.scss";
+import { FaTrash } from "react-icons/fa";
 
 type CanvaItemProps = {
   title: string;
@@ -23,7 +24,7 @@ function CanvaItem(props: CanvaItemProps) {
   return (
     <div className="canva-item">
       <span>{props.title}</span>
-      <Button title="x" onClick={() => removeItem(props.title)} inner />
+      <Button icon={FaTrash} onClick={() => removeItem(props.title)} inner />
     </div>
   );
 }

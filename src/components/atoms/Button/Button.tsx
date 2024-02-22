@@ -3,6 +3,7 @@ import "./Button.scss";
 
 type ButtonProps = {
   title?: string;
+  icon?: any;
   disabled?: boolean;
   link?: string;
   secondary?: boolean;
@@ -17,6 +18,7 @@ function Button(props: ButtonProps) {
   let className = "button";
   if (props.secondary) className += " secondary";
   if (props.inner) className += " inner";
+  if (props.icon) className += " icon";
 
   return (
     <button
@@ -26,7 +28,8 @@ function Button(props: ButtonProps) {
       onMouseLeave={props.onMouseLeave}
       className={className}
     >
-      <span>{props.title}</span>
+      {props.icon && <props.icon />}
+      {props.title && <span>{props.title}</span>}
       {props.removal && <span>x</span>}
     </button>
   );
