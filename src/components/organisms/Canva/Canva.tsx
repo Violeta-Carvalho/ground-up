@@ -4,6 +4,7 @@ import "./Canva.scss";
 import recipeJson from "../../../utils/recipes.json";
 import { getCanvaItems, getMenuItems, isEqual } from "../../../utils/utils";
 import CanvaItem from "../../molecules/CanvaItem/CanvaItem";
+import { toast } from "react-toastify";
 
 function Canva() {
   const [canvaItems, setCanvaItems] = useState<string[]>([]);
@@ -28,11 +29,39 @@ function Canva() {
       }
     }
 
-    if (!recipe) return;
+    if (!recipe) {
+      toast("❌ Nothing happens...", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
+      return;
+    }
 
+    let somethingNew = false;
     recipe.result.forEach((result) => {
-      if (!currentItems.includes(result)) currentItems.push(result);
+      if (!currentItems.includes(result)) {
+        currentItems.push(result);
+        somethingNew = true;
+      }
     });
+
+    if (somethingNew)
+      toast("🎉 You created a new particle!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
 
     setCanvaItems(recipe.result);
     localStorage.setItem("menu-items", JSON.stringify(currentItems));
