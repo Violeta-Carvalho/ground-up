@@ -1,0 +1,20 @@
+[
+  {
+    "recipe": ["Quark Up", "Quark Up", "Quark Down"],
+    "result": ["Proton"]
+  },
+  {
+    "recipe": ["Quark Up", "Quark Down", "Quark Down"],
+    "result": ["Neutron"]
+  },
+  { "recipe": ["Proton", "Electron"], "result": ["Hydrogen"] },
+  {
+    "recipe": ["Proton", "Neutron", "Electron"],
+    "result": ["Hydrogen"]
+  },
+  {
+    "recipe": ["Proton", "Neutron", "Neutron", "Electron"],
+    "result": ["Hydrogen"]
+  },
+  { "recipe": ["Hydrogen", "Proton"], "result": ["Helium"] }
+]

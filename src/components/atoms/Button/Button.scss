@@ -1,0 +1,15 @@
+.button {
+    background-color: aqua;
+    color: black;
+    padding: 8px;
+    border-radius: 8px;
+
+    &.secondary {
+        background-color: #282c34;
+        color: aqua
+    }
+
+    & > :nth-child(2) {
+        margin-left: 8px;
+    }
+}

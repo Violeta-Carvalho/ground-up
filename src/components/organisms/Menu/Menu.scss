@@ -1,0 +1,10 @@
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+
+    &> * {
+        display: flex;
+        flex-direction: column;
+    }
+}

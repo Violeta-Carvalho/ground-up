@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Electron",
+    "category": "Fundamental",
+    "description": "Fundamental particle, carries negative electromagnetic charge, exhibits wave-particle duality, and occupies quantized energy levels in an atom's electron cloud."
+  },
+  {
+    "name": "Quark Up",
+    "category": "Fundamental",
+    "description": ""
+  },
+  {
+    "name": "Quark Down",
+    "category": "Fundamental",
+    "description": ""
+  },
+  {
+    "name": "Proton",
+    "category": "Subatomic",
+    "description": ""
+  },
+  {
+    "name": "Neutron",
+    "category": "Subatomic",
+    "description": ""
+  },
+  {
+    "name": "Hydrogen",
+    "category": "Atom",
+    "description": ""
+  },
+  {
+    "name": "Helium",
+    "category": "Atom",
+    "description": ""
+  }
+]
