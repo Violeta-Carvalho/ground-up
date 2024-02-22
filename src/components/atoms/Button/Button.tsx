@@ -7,13 +7,17 @@ type ButtonProps = {
   link?: string;
   secondary?: boolean;
   removal?: boolean;
+  inner?: boolean;
   onClick?: () => void;
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
 };
 
 function Button(props: ButtonProps) {
-  const className = props.secondary ? "button secondary" : "button";
+  let className = "button";
+  if (props.secondary) className += " secondary";
+  if (props.inner) className += " inner";
+
   return (
     <button
       disabled={props.disabled}

@@ -7,31 +7,31 @@
   {
     "name": "Quark Up",
     "category": "Fundamental",
-    "description": ""
+    "description": "Fundamental particle, carries positive two-thirds elementary charge, and experiences strong nuclear force."
   },
   {
     "name": "Quark Down",
     "category": "Fundamental",
-    "description": ""
+    "description": "Fundamental particle, carries negative one-third elementary charge, subject to strong nuclear force in quantum physics."
   },
   {
     "name": "Proton",
     "category": "Subatomic",
-    "description": ""
+    "description": "Subatomic particle, found in atomic nuclei, carries positive charge, composed of quarks, and contributes to the atom's overall positive charge."
   },
   {
     "name": "Neutron",
     "category": "Subatomic",
-    "description": ""
+    "description": "Subatomic particle, located in atomic nuclei, carries no charge, composed of quarks, and contributes to atomic mass without adding electric charge."
   },
   {
     "name": "Hydrogen",
     "category": "Atom",
-    "description": ""
+    "description": "Elemental atom with one proton and one electron, the simplest and most abundant in the universe, forming the basis of stars."
   },
   {
     "name": "Helium",
     "category": "Atom",
-    "description": ""
+    "description": "Inert gas, second lightest element, with two protons, two neutrons, and two electrons, commonly used in balloons and cryogenics."
   }
 ]

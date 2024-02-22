@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Button from "../../atoms/Button/Button";
 import "./Canva.scss";
-import Item from "../../molecules/Item/Item";
 import recipeJson from "../../../utils/recipes.json";
 import { getCanvaItems, getMenuItems, isEqual } from "../../../utils/utils";
+import CanvaItem from "../../molecules/CanvaItem/CanvaItem";
 
 function Canva() {
   const [canvaItems, setCanvaItems] = useState<string[]>([]);
-
-  const getItemFromJson = (itemName: string) => {
-    return { name: itemName, description: "", category: "" };
-  };
 
   const getItems = () => {
     const tempCanvaItems = getCanvaItems();
@@ -55,8 +51,7 @@ function Canva() {
       <h2>Particles</h2>
       <div>
         {canvaItems.map((itemName, index) => {
-          const item = getItemFromJson(itemName);
-          return item && <Item item={item} key={index} isCanvaItem />;
+          return <CanvaItem title={itemName} key={index} />;
         })}
       </div>
     </div>

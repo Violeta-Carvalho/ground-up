@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ItemMenu from "../organisms/ItemMenu/ItemMenu";
 import Canva from "../organisms/Canva/Canva";
 import "./Game.scss";

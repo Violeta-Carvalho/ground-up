@@ -3,13 +3,28 @@
     color: black;
     padding: 8px;
     border-radius: 8px;
-
-    &.secondary {
+    
+    &:hover {
         background-color: #282c34;
-        color: aqua
+        color: aqua;
+    }
+
+    &.inner {
+        padding: 4px;
+        border: none;
     }
 
     & > :nth-child(2) {
         margin-left: 8px;
+    }
+
+    &.secondary {
+        background-color: #282c34;
+        color: aqua;
+
+        &:hover {
+            background-color: aqua;
+            color: #282c34;
+        }
     }
 }

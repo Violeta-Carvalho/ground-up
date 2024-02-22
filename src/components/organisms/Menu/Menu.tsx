@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Button from "../../atoms/Button/Button";
 import initialItems from "../../../utils/initialItems.json";
 import "./Menu.scss";
