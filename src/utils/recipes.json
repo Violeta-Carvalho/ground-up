@@ -8,22 +8,35 @@
     "result": ["Neutron"]
   },
   { "recipe": ["Proton", "Electron"], "result": ["Hydrogen"] },
+  { "recipe": ["Proton", "Electron", "Neutron"], "result": ["Deuterium"] },
+  { "recipe": ["Hydrogen", "Neutron"], "result": ["Deuterium"] },
+  { "recipe": ["Hydrogen", "Hydrogen"], "result": ["Unstable Helium"] },
   {
-    "recipe": ["Proton", "Neutron", "Electron"],
-    "result": ["Hydrogen"]
+    "recipe": ["Hydrogen", "Hydrogen", "Neutron", "Neutron"],
+    "result": ["Helium"]
   },
   {
-    "recipe": ["Proton", "Neutron", "Neutron", "Electron"],
-    "result": ["Hydrogen"]
+    "recipe": ["Unstable Helium", "Neutron", "Neutron"],
+    "result": ["Helium"]
   },
-  { "recipe": ["Hydrogen", "Hydrogen"], "result": ["Helium"] },
-  { "recipe": ["Hydrogen", "Proton", "Electron"], "result": ["Helium"] },
-  { "recipe": ["Helium", "Hydrogen"], "result": ["Lithium"] },
-  { "recipe": ["Lithium", "Hydrogen"], "result": ["Beryllium"] },
-  { "recipe": ["Beryllium", "Hydrogen"], "result": ["Boron"] },
+  {
+    "recipe": ["Deuterium", "Deuterium"],
+    "result": ["Helium"]
+  },
+  {
+    "recipe": ["Helium", "Hydrogen", "Neutron", "Neutron"],
+    "result": ["Lithium"]
+  },
+  { "recipe": ["Helium", "Deuterium", "Neutron"], "result": ["Lithium"] },
+  { "recipe": ["Lithium", "Hydrogen", "Neutron"], "result": ["Beryllium"] },
+  { "recipe": ["Lithium", "Deuterium"], "result": ["Beryllium"] },
+  { "recipe": ["Beryllium", "Hydrogen", "Neutron"], "result": ["Boron"] },
+  { "recipe": ["Beryllium", "Deuterium"], "result": ["Boron"] },
   { "recipe": ["Boron", "Hydrogen"], "result": ["Carbon"] },
-  { "recipe": ["Carbon", "Hydrogen"], "result": ["Nitrogen"] },
-  { "recipe": ["Nitrogen", "Hydrogen"], "result": ["Oxygen"] },
+  { "recipe": ["Carbon", "Hydrogen", "Neutron"], "result": ["Nitrogen"] },
+  { "recipe": ["Carbon", "Deuterium"], "result": ["Nitrogen"] },
+  { "recipe": ["Nitrogen", "Hydrogen", "Neutron"], "result": ["Oxygen"] },
+  { "recipe": ["Nitrogen", "Deuterium"], "result": ["Oxygen"] },
 
   { "recipe": ["Helium", "Helium"], "result": ["Helium Gas"] },
   { "recipe": ["Hydrogen", "Hydrogen", "Oxygen"], "result": ["Water"] },

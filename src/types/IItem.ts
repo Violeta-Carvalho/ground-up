@@ -9,6 +9,8 @@ interface IItem {
     name: string;
     category: string;
     description: string;
+    protons?: number;
+    neutrons?: number;
 }
 
 export default IItem;

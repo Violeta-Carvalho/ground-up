@@ -47,7 +47,12 @@ function Item(props: ItemProps) {
         removal={props.isCanvaItem}
       />
       {!props.isCanvaItem && isHovering && (
-        <DescriptionBox title={props.item.name} text={props.item.description} />
+        <DescriptionBox
+          title={props.item.name}
+          text={props.item.description}
+          protons={props.item.protons}
+          neutrons={props.item.neutrons}
+        />
       )}
     </div>
   );

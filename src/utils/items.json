@@ -29,42 +29,72 @@
   {
     "name": "Hydrogen",
     "category": "Atom",
-    "description": "Elemental atom of atomic number 1. The simplest and most abundant in the universe, forming the basis of stars."
+    "description": "Elemental atom of atomic number 1. The simplest and most abundant in the universe, forming the basis of stars.",
+    "protons": 1,
+    "neutrons": 0
+  },
+  {
+    "name": "Deuterium",
+    "category": "Atom",
+    "description": "Elemental atom of atomic number 1. Hydrogen with an extra neutron.",
+    "protons": 1,
+    "neutrons": 1
+  },
+  {
+    "name": "Unstable Helium",
+    "category": "Atom",
+    "description": "Elemental atom of atomic number 2. Lighter than usual, and decays very quickly. It lacks something...",
+    "protons": 2,
+    "neutrons": 0
   },
   {
     "name": "Helium",
     "category": "Atom",
-    "description": "Elemental atom of atomic number 2. Second lightest element, commonly used in balloons and cryogenics."
+    "description": "Elemental atom of atomic number 2. Second lightest element, commonly used in balloons and cryogenics.",
+    "protons": 2,
+    "neutrons": 2
   },
   {
     "name": "Lithium",
     "category": "Atom",
-    "description": "Elemental atom of atomic number 3. An alkali metal essential in batteries and used in various industrial applications."
+    "description": "Elemental atom of atomic number 3. An alkali metal essential in batteries and used in various industrial applications.",
+    "protons": 3,
+    "neutrons": 4
   },
   {
     "name": "Beryllium",
     "category": "Atom",
-    "description": "Elemental atom of atomic number 4. A lightweight metal, strong, with applications in aerospace and nuclear industries."
+    "description": "Elemental atom of atomic number 4. A lightweight metal, strong, with applications in aerospace and nuclear industries.",
+    "protons": 4,
+    "neutrons": 5
   },
   {
     "name": "Boron",
     "category": "Atom",
-    "description": "Elemental atom of atomic number 5. A metalloid with diverse applications, including electronics and borosilicate glass."
+    "description": "Elemental atom of atomic number 5. A metalloid with diverse applications, including electronics and borosilicate glass.",
+    "protons": 5,
+    "neutrons": 6
   },
   {
     "name": "Carbon",
     "category": "Atom",
-    "description": "Elemental atom of atomic number 6. Fundamental to life's organic compounds, forms diverse molecular structures."
+    "description": "Elemental atom of atomic number 6. Fundamental to life's organic compounds, forms diverse molecular structures.",
+    "protons": 6,
+    "neutrons": 6
   },
   {
     "name": "Nitrogen",
     "category": "Atom",
-    "description": "Elemental atom of atomic number 7. Essential for life, abundant in Earth's atmosphere, and crucial for the nitrogen cycle."
+    "description": "Elemental atom of atomic number 7. Essential for life, abundant in Earth's atmosphere, and crucial for the nitrogen cycle.",
+    "protons": 7,
+    "neutrons": 7
   },
   {
     "name": "Oxygen",
     "category": "Atom",
-    "description": "Elemental atom of atomic number 8. Vital for respiration, combustion, and a key element in various compounds."
+    "description": "Elemental atom of atomic number 8. Vital for respiration, combustion, and a key element in various compounds.",
+    "protons": 8,
+    "neutrons": 8
   },
 
   {
